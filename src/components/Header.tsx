@@ -39,7 +39,7 @@ export default function Header({
           aria-label={theme === "dark" ? themeToggleLabels.switchToLight : themeToggleLabels.switchToDark}
           aria-pressed={theme === "dark"}
           title={theme === "dark" ? themeToggleLabels.switchToLight : themeToggleLabels.switchToDark}
-          className="theme-name-hint shrink-0 rounded-sm font-display text-xl text-foreground transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:text-2xl"
+          className="theme-name-hint inline-flex min-h-12 shrink-0 items-center justify-center rounded-full border border-border bg-card px-5 py-2 font-display text-xl text-foreground shadow-sm transition-[color,background-color,border-color,box-shadow] hover:border-primary hover:bg-secondary hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:px-6 sm:text-2xl"
         >
           {name}
         </button>
