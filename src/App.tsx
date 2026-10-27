@@ -58,7 +58,7 @@ export default function App() {
         <Values {...content.values} />
         <Curiosities {...content.curiosities} />
         <HowIWork {...content.howIWork} />
-        <BeyondTheCode {...content.beyondTheCode} />
+        <BeyondTheCode {...content.beyondTheCode} whyIBuild={content.whyIBuild} />
         <Projects {...content.projects} />
         <Contact
           ctaLabel={content.hero.getInTouch}

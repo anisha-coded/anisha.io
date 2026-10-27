@@ -92,6 +92,10 @@ export const content = {
     title: "Beyond the code",
     body: "[Placeholder: 2–3 lines about what I do outside of work. I will fill this in.]",
   },
+  whyIBuild: {
+    title: "Why I build",
+    body: "I code because it’s the closest thing I know to magic: you start with an idea only you can see, and with enough patience and curiosity it becomes something real that other people can use. The freedom to create something new and put my own vision into the world is what keeps me in this field.",
+  },
   projects: {
     label: "Selected work",
     title: "Projects",
