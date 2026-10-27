@@ -33,9 +33,8 @@
     --hazel: 86 20% 41%;
     --mint: 160 23% 76%;
     --amethyst: 275 15% 63%;
-    --font-heading: 'Inter', ui-sans-serif, system-ui, sans-serif;
-    --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
-    --font-display: 'Chewy', 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --font-heading: "Instrument Serif", Georgia, "Times New Roman", serif;
+    --font-body: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
     --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     --sidebar-background: 40 43% 96%;
     --sidebar-foreground: 88 29% 26%;
@@ -101,6 +100,17 @@
     @apply bg-background text-foreground font-body;
     min-width: 320px;
     margin: 0;
+    font-weight: 400;
+    line-height: 1.65;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
   }
 
   img {
@@ -119,8 +129,29 @@
 }
 
 @layer components {
+  .type-hero {
+    @apply font-heading font-normal;
+    font-size: clamp(3.25rem, calc(8vw + 1rem), 7.25rem);
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+  }
+
+  .type-section-title {
+    @apply font-heading font-normal;
+    font-size: clamp(2.25rem, calc(3vw + 1.25rem), 3.75rem);
+    letter-spacing: -0.01em;
+    line-height: 1.12;
+  }
+
+  .type-card-title {
+    @apply font-heading font-normal;
+    font-size: clamp(1.75rem, calc(2vw + 1.25rem), 2.75rem);
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+  }
+
   .skip-link {
-    @apply fixed left-4 top-4 z-50 rounded-full bg-primary px-5 py-3 font-semibold text-primary-foreground shadow-lg;
+    @apply fixed left-4 top-4 z-50 rounded-full bg-primary px-5 py-3 font-bold text-primary-foreground shadow-lg;
     transform: translateY(-180%);
   }
 

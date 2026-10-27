@@ -16,7 +16,7 @@ export default function BeyondTheCode({ label, title, body, whyIBuild }: BeyondT
         <div className="mt-8 grid auto-rows-fr grid-cols-1 gap-8 md:grid-cols-2">
           <article className="flex h-full min-h-[25rem] flex-col border border-border bg-background p-6 shadow-md sm:p-8">
             <div className="flex min-h-20 items-start justify-between gap-4 border-b border-dashed border-border pb-5">
-              <h2 className="font-display text-3xl leading-tight text-foreground sm:text-4xl">{title}</h2>
+              <h2 className="type-card-title text-foreground">{title}</h2>
               <div aria-hidden="true" className="grid h-14 w-14 shrink-0 rotate-3 place-items-center border border-dashed border-terra p-1">
                 <span className="grid h-full w-full place-items-center bg-secondary font-mono text-xs text-secondary-foreground">✳</span>
               </div>
@@ -26,7 +26,7 @@ export default function BeyondTheCode({ label, title, body, whyIBuild }: BeyondT
           </article>
           <article className="flex h-full min-h-[25rem] flex-col border border-border bg-background p-6 shadow-md sm:p-8">
             <div className="flex min-h-20 items-start justify-between gap-4 border-b border-dashed border-border pb-5">
-              <h2 className="font-display text-3xl leading-tight text-foreground sm:text-4xl">{whyIBuild.title}</h2>
+              <h2 className="type-card-title text-foreground">{whyIBuild.title}</h2>
               <div aria-hidden="true" className="grid h-14 w-14 shrink-0 -rotate-3 place-items-center border border-dashed border-terra p-1">
                 <span className="grid h-full w-full place-items-center bg-secondary font-mono text-xs text-secondary-foreground">✳</span>
               </div>

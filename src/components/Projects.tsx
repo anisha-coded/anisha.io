@@ -18,7 +18,7 @@ export default function Projects({ label, title, items }: ProjectsProps) {
       <div className="grid gap-4 md:grid-cols-3">
         {items.map((project, index) => (
           <article key={`${project.title}-${index}`} className="flex min-h-72 flex-col border border-border bg-card p-6 sm:p-7">
-            <h3 className="mt-3 font-display text-2xl text-foreground">{project.title}</h3>
+            <h3 className="type-card-title mt-3 text-foreground">{project.title}</h3>
             <p className="mt-4 flex-1 text-base leading-relaxed text-muted-foreground">{project.description}</p>
             <ul className="mt-5 flex flex-wrap gap-2" aria-label={project.title}>
               {project.technologies.map((technology, tagIndex) => (
@@ -29,7 +29,7 @@ export default function Projects({ label, title, items }: ProjectsProps) {
               {isPlaceholder(project.link) ? (
                 <span className="font-mono text-xs text-muted-foreground">{project.link}</span>
               ) : (
-                <a className="font-semibold text-primary underline decoration-terra underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" href={project.link}>
+                <a className="font-medium text-primary underline decoration-terra underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring" href={project.link}>
                   {project.title}
                 </a>
               )}

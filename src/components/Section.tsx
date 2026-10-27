@@ -33,7 +33,7 @@ export default function Section({
         {title && (
           <h2
             id={`${id}-title`}
-            className={`mt-3 max-w-3xl font-display text-3xl leading-tight text-foreground sm:text-4xl lg:text-5xl ${titleClassName}`}
+            className={`type-section-title mt-3 max-w-3xl text-foreground ${titleClassName}`}
           >
             {title}
           </h2>

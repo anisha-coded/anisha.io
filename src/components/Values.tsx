@@ -17,7 +17,7 @@ export default function Values({ label, title, items }: ValuesProps) {
       <div className="grid gap-4 sm:grid-cols-2">
         {items.map((item) => (
           <article key={item.title} className="rounded-sm border border-border bg-card p-6 transition duration-200 hover:-translate-y-1 hover:shadow-md sm:p-8">
-            <h3 className="font-display text-2xl text-foreground">{item.title}</h3>
+            <h3 className="type-card-title text-foreground">{item.title}</h3>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">{item.body}</p>
           </article>
         ))}
