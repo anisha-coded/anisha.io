@@ -10,7 +10,7 @@ interface AboutProps {
 
 export default function About({ label, title, paragraphs, portraitAlt }: AboutProps) {
   return (
-    <Section id="about" label={label} title={title}>
+    <Section id="about" label={label} title={title} labelClassName="text-sm sm:text-base">
       <div className="grid gap-10 md:grid-cols-[0.75fr_1.25fr] md:items-start lg:gap-16">
         <figure className="mx-auto w-full max-w-sm rotate-1 border border-border bg-card p-3 shadow-sm md:mx-0">
           <img

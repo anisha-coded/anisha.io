@@ -7,6 +7,7 @@ interface SectionProps {
   children: ReactNode;
   className?: string;
   titleClassName?: string;
+  labelClassName?: string;
 }
 
 export default function Section({
@@ -16,6 +17,7 @@ export default function Section({
   children,
   className = "",
   titleClassName = "",
+  labelClassName = "text-xs",
 }: SectionProps) {
   return (
     <section
@@ -24,7 +26,7 @@ export default function Section({
       className={`scroll-mt-24 py-16 sm:py-20 lg:py-24 ${className}`}
     >
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <p className="font-mono text-xs font-medium uppercase tracking-[0.18em] text-foreground">
+        <p className={`font-mono font-medium uppercase tracking-[0.18em] text-foreground ${labelClassName}`}>
           {label}
         </p>
         <h2
