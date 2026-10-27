@@ -1,15 +1,17 @@
+import landscape from "@/assets/portfolio/landscape.png";
+import swatches from "@/assets/portfolio/swatches.png";
+import proofs from "@/assets/portfolio/proofs.png";
+import linen from "@/assets/portfolio/linen.png";
+import desk from "@/assets/portfolio/desk.png";
+import studio from "@/assets/portfolio/studio.png";
+
 export const images = {
-  landscape:
-    "https://media.base44.com/images/public/6ae0f78069b91c7f20582792/041192f48_generated_image.png",
-  swatches:
-    "https://media.base44.com/images/public/6ae0f78069b91c7f20582792/bf72301a1_generated_image.png",
-  proofs:
-    "https://media.base44.com/images/public/6ae0f78069b91c7f20582792/fe601891a_generated_image.png",
-  linen:
-    "https://media.base44.com/images/public/6ae0f78069b91c7f20582792/929748ded_generated_image.png",
-  desk: "https://media.base44.com/images/public/6ae0f78069b91c7f20582792/98501843b_generated_image.png",
-  studio:
-    "https://media.base44.com/images/public/6ae0f78069b91c7f20582792/025ef024d_generated_image.png",
+  landscape,
+  swatches,
+  proofs,
+  linen,
+  desk,
+  studio,
 };
 
 export const story = {
