@@ -7,11 +7,11 @@ export default function PortfolioHeader() {
     <header className="border border-border bg-card p-5 md:p-8">
       <div className="flex items-baseline justify-between font-mono text-[10px] uppercase tracking-[0.26em] text-hazel">
         <span>{story.eyebrow}</span>
-        <span>{story.name}</span>
+        <span>★ ☆ {story.name} ☆ ★</span>
       </div>
 
       <div className="mt-3 flex flex-wrap items-end gap-x-4">
-        <h1 className="font-display text-[clamp(3.4rem,16vw,11rem)] leading-[0.8] text-primary">
+        <h1 className="font-display text-[clamp(3.4rem,16vw,11rem)] leading-[0.8] text-[#0b2e17]">
           {story.title}
         </h1>
         <span aria-hidden="true" className="pb-3 font-display text-3xl text-terra md:text-5xl">
