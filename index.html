@@ -3,10 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ANISHA KARMAKAR</title>
+    <meta name="theme-color" content="#f2eee5" />
+    <meta name="description" content="Anisha Karmakar, full stack engineer who loves building clear, accessible, human-centered web experiences with React and TypeScript." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Anisha Karmakar — Full Stack Engineer" />
+    <meta property="og:description" content="Anisha Karmakar, full stack engineer who loves building clear, accessible, human-centered web experiences with React and TypeScript." />
+    <meta property="og:url" content="https://anisha-coded.github.io/anisha.io/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Anisha Karmakar — Full Stack Engineer" />
+    <meta name="twitter:description" content="Anisha Karmakar, full stack engineer who loves building clear, accessible, human-centered web experiences with React and TypeScript." />
+    <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chewy&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap" />
+    <title>Anisha Karmakar — Full Stack Engineer</title>
+    <script>
+      try {
+        const savedTheme = localStorage.getItem("portfolio-theme");
+        if (savedTheme === "dark" || (!savedTheme && matchMedia("(prefers-color-scheme: dark)").matches)) {
+          document.documentElement.classList.add("dark");
+        }
+      } catch {
+        // The app can still use the default light theme when storage is unavailable.
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -3,30 +3,22 @@ import pluginJs from "@eslint/js";
 import pluginReact from "eslint-plugin-react";
 import pluginReactHooks from "eslint-plugin-react-hooks";
 import pluginUnusedImports from "eslint-plugin-unused-imports";
+import tseslint from "typescript-eslint";
 
 export default [
+  { ignores: ["dist/**", "node_modules/**", "anisha.io/**"] },
+  { settings: { react: { version: "detect" } } },
+  pluginJs.configs.recommended,
+  ...tseslint.configs.recommended,
+  pluginReact.configs.flat.recommended,
   {
-    files: [
-      "src/components/**/*.{js,mjs,cjs,jsx}",
-      "src/pages/**/*.{js,mjs,cjs,jsx}",
-      "src/Layout.jsx",
-    ],
-    ignores: ["src/lib/**/*", "src/components/ui/**/*"],
-    ...pluginJs.configs.recommended,
-    ...pluginReact.configs.flat.recommended,
+    files: ["src/**/*.{ts,tsx}"],
     languageOptions: {
       globals: globals.browser,
       parserOptions: {
         ecmaVersion: 2022,
         sourceType: "module",
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-    },
-    settings: {
-      react: {
-        version: "detect",
+        ecmaFeatures: { jsx: true },
       },
     },
     plugins: {
@@ -34,13 +26,20 @@ export default [
       "react-hooks": pluginReactHooks,
       "unused-imports": pluginUnusedImports,
     },
+    settings: {
+      react: { version: "detect" },
+    },
     rules: {
       "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": "off",
       "react/jsx-uses-vars": "error",
-      "react/jsx-uses-react": "error",
+      "react/jsx-uses-react": "off",
+      "react/prop-types": "off",
+      "react/react-in-jsx-scope": "off",
+      "react-hooks/rules-of-hooks": "error",
       "unused-imports/no-unused-imports": "error",
       "unused-imports/no-unused-vars": [
-        "warn",
+        "error",
         {
           vars: "all",
           varsIgnorePattern: "^_",
@@ -48,13 +47,10 @@ export default [
           argsIgnorePattern: "^_",
         },
       ],
-      "react/prop-types": "off",
-      "react/react-in-jsx-scope": "off",
-      "react/no-unknown-property": [
-        "error",
-        { ignore: ["cmdk-input-wrapper", "toast-close"] },
-      ],
-      "react-hooks/rules-of-hooks": "error",
     },
+  },
+  {
+    files: ["vite.config.js", "tailwind.config.js", "eslint.config.js"],
+    languageOptions: { globals: globals.node },
   },
 ];
