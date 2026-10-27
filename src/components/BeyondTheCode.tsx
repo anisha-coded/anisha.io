@@ -18,7 +18,7 @@ export default function BeyondTheCode({ label, title, body, whyIBuild }: BeyondT
             <div className="flex min-h-20 items-start justify-between gap-4 border-b border-dashed border-border pb-5">
               <h2 className="type-card-title text-foreground">{title}</h2>
               <div aria-hidden="true" className="grid h-14 w-14 shrink-0 rotate-3 place-items-center border border-dashed border-terra p-1">
-                <span className="grid h-full w-full place-items-center bg-secondary font-mono text-xs text-secondary-foreground">✳</span>
+                <span className="grid h-full w-full place-items-center bg-secondary"><span className="h-2 w-2 rounded-full bg-terra opacity-80" /></span>
               </div>
             </div>
             <p className="mt-6 flex-1 border-l-2 border-terra pl-5 text-lg leading-relaxed text-muted-foreground">{body}</p>
@@ -28,7 +28,7 @@ export default function BeyondTheCode({ label, title, body, whyIBuild }: BeyondT
             <div className="flex min-h-20 items-start justify-between gap-4 border-b border-dashed border-border pb-5">
               <h2 className="type-card-title text-foreground">{whyIBuild.title}</h2>
               <div aria-hidden="true" className="grid h-14 w-14 shrink-0 -rotate-3 place-items-center border border-dashed border-terra p-1">
-                <span className="grid h-full w-full place-items-center bg-secondary font-mono text-xs text-secondary-foreground">✳</span>
+                <span className="grid h-full w-full place-items-center bg-secondary"><span className="h-2 w-2 rounded-full bg-terra opacity-80" /></span>
               </div>
             </div>
             <p className="mt-6 flex-1 border-l-2 border-terra pl-5 text-lg leading-relaxed text-muted-foreground">{whyIBuild.body}</p>
