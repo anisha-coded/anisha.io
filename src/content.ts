@@ -136,5 +136,5 @@ export const content = {
     linkedinLabel: "LinkedIn",
     githubLabel: "GitHub",
   },
-  footer: "Thanks for stopping by.",
+  footer: "Thank you for visiting. I hope to see you again soon.",
 } as const;

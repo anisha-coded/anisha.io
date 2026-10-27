@@ -66,7 +66,7 @@ export default function App() {
           contact={content.contact}
         />
       </main>
-      <Footer name={content.name} message={content.footer} github={content.contact.github} />
+      <Footer name={content.name} message={content.footer} />
     </div>
   );
 }
