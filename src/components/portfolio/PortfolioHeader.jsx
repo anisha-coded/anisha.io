@@ -23,8 +23,8 @@ export default function PortfolioHeader() {
         <div className="md:col-span-8">
           <Polaroid
             src={images.landscape}
-            alt="A wild meadow in warm late-afternoon light"
-            ratio="aspect-[16/9]"
+            alt="Portrait of Anisha Karmakar"
+            ratio="aspect-square"
             rotate="-rotate-1"
             caption="somewhere in between"
           />

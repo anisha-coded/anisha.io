@@ -1,12 +1,11 @@
-import landscape from "@/assets/portfolio/landscape.png";
+import me from "@/assets/portfolio/me.png";
 import swatches from "@/assets/portfolio/swatches.png";
 import proofs from "@/assets/portfolio/proofs.png";
 import linen from "@/assets/portfolio/linen.png";
 import desk from "@/assets/portfolio/desk.png";
 import studio from "@/assets/portfolio/studio.png";
-
 export const images = {
-  landscape,
+  landscape: me,
   swatches,
   proofs,
   linen,
