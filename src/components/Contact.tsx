@@ -43,7 +43,7 @@ export default function Contact({ ctaLabel, openToWork, contact }: ContactProps)
               {isPlaceholder(link.value) ? (
                 <span className="font-medium text-foreground">{link.value}</span>
               ) : (
-                <a className="inline-flex min-h-11 items-center rounded-full border border-terra bg-terra px-4 py-2 font-medium text-accent-foreground shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background" href={link.href}>
+                <a className="inline-flex min-h-11 items-center rounded-full border border-terra bg-terra px-4 py-2 font-medium text-card shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background" href={link.href}>
                   {link.label === contact.emailLabel ? link.value.replace("mailto:", "") : link.value.replace("https://", "")}
                 </a>
               )}
