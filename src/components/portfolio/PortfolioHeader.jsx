@@ -10,8 +10,8 @@ export default function PortfolioHeader() {
         <span>{story.name}</span>
       </div>
 
-      <div className="mt-3 flex flex-wrap items-end gap-x-4">
-        <h1 className="font-display text-[clamp(3.4rem,16vw,11rem)] leading-[0.8] text-[#0b2e17]">
+      <div className="mt-3 flex w-full items-end gap-x-3 md:w-1/2">
+        <h1 className="min-w-0 font-display text-[clamp(2rem,7vw,5.5rem)] leading-[0.9] text-[#365004]">
           {story.title}
         </h1>
         <span aria-hidden="true" className="pb-3 font-display text-3xl text-terra md:text-5xl">
