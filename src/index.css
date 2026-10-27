@@ -48,24 +48,24 @@
 
   :root.dark {
     color-scheme: dark;
-    --background: 88 18% 12%;
-    --foreground: 49 47% 93%;
-    --card: 88 18% 15%;
+    --background: 88 18% 11%;
+    --foreground: 49 38% 93%;
+    --card: 88 18% 17%;
     --card-foreground: 49 47% 93%;
-    --popover: 88 18% 15%;
+    --popover: 88 18% 17%;
     --popover-foreground: 49 47% 93%;
     --primary: 49 47% 93%;
     --primary-foreground: 88 29% 20%;
-    --secondary: 160 15% 26%;
+    --secondary: 160 18% 32%;
     --secondary-foreground: 49 47% 93%;
-    --muted: 88 14% 20%;
+    --muted: 88 14% 22%;
     --muted-foreground: 49 20% 76%;
     --accent: 355 51% 60%;
     --accent-foreground: 49 47% 96%;
     --destructive: 355 51% 60%;
     --destructive-foreground: 49 47% 96%;
-    --border: 88 14% 26%;
-    --input: 88 14% 26%;
+    --border: 88 14% 30%;
+    --input: 88 14% 30%;
     --ring: 355 51% 60%;
     --terra: 355 51% 60%;
     --coral: 7 82% 72%;
@@ -75,13 +75,13 @@
     --hazel: 86 20% 55%;
     --mint: 160 23% 76%;
     --amethyst: 275 15% 63%;
-    --sidebar-background: 88 18% 15%;
+    --sidebar-background: 88 18% 17%;
     --sidebar-foreground: 49 47% 93%;
     --sidebar-primary: 49 47% 93%;
     --sidebar-primary-foreground: 88 29% 20%;
-    --sidebar-accent: 88 14% 20%;
+    --sidebar-accent: 88 14% 22%;
     --sidebar-accent-foreground: 49 47% 93%;
-    --sidebar-border: 88 14% 26%;
+    --sidebar-border: 88 14% 30%;
     --sidebar-ring: 355 51% 60%;
   }
 

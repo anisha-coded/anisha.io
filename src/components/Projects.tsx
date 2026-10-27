@@ -14,7 +14,7 @@ function isPlaceholder(value: string) {
 
 export default function Projects({ label, title, items }: ProjectsProps) {
   return (
-    <Section id="projects" label={label} title={title} className="bg-secondary/25">
+    <Section id="projects" label={label} title={title} className="bg-secondary/25 dark:bg-secondary/45">
       <div className="grid gap-4 md:grid-cols-3">
         {items.map((project, index) => (
           <article key={`${project.title}-${index}`} className="flex min-h-72 flex-col border border-border bg-card p-6 sm:p-7">
