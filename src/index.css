@@ -146,6 +146,17 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes theme-name-nudge {
+  0%, 82%, 100% { transform: translateX(0); }
+  86% { transform: translateX(5px); }
+  90% { transform: translateX(-4px); }
+  94% { transform: translateX(2px); }
+}
+
+.theme-name-hint {
+  animation: theme-name-nudge 5s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after {
@@ -157,5 +168,8 @@
   .rise, .rise-late {
     opacity: 1;
     transform: none;
+  }
+  .theme-name-hint {
+    animation: none;
   }
 }

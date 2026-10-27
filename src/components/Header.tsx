@@ -1,7 +1,6 @@
 import { useState } from "react";
 import type { NavigationItem } from "@/content";
 import type { Theme } from "@/components/ThemeToggle";
-import ThemeToggle from "@/components/ThemeToggle";
 
 interface HeaderProps {
   name: string;
@@ -33,16 +32,35 @@ export default function Header({
 
   return (
     <header className="sticky top-0 z-30 border-b border-border/80 bg-background/95 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-3 sm:px-8">
-        <a
-          href="#top"
-          className="font-display text-xl text-foreground transition hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+      <div className="relative mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3 sm:px-8">
+        <button
+          type="button"
+          onClick={onToggleTheme}
+          aria-label={theme === "dark" ? themeToggleLabels.switchToLight : themeToggleLabels.switchToDark}
+          aria-pressed={theme === "dark"}
+          title={theme === "dark" ? themeToggleLabels.switchToLight : themeToggleLabels.switchToDark}
+          className="theme-name-hint shrink-0 rounded-sm font-display text-xl text-foreground transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:text-2xl"
         >
           {name}
-        </a>
+        </button>
 
         <div className="flex items-center gap-2">
-          <ThemeToggle theme={theme} onToggle={onToggleTheme} {...themeToggleLabels} />
+          <nav
+            id="primary-navigation"
+            aria-label={navigationLabel}
+            className={`${menuOpen ? "flex" : "hidden"} absolute left-0 right-0 top-full order-3 w-full flex-col gap-1 border-b border-border bg-background px-5 py-3 shadow-md sm:px-8 md:static md:order-none md:flex md:w-auto md:flex-row md:items-center md:gap-5 md:border-0 md:bg-transparent md:p-0 md:shadow-none`}
+          >
+            {navigation.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                onClick={() => setMenuOpen(false)}
+                className="rounded px-2 py-2 text-sm font-medium text-muted-foreground transition hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
           <button
             type="button"
             className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-border text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring md:hidden"
@@ -56,23 +74,6 @@ export default function Header({
             </span>
           </button>
         </div>
-
-        <nav
-          id="primary-navigation"
-          aria-label={navigationLabel}
-          className={`${menuOpen ? "flex" : "hidden"} order-3 w-full flex-col gap-1 border-t border-border pt-3 md:order-none md:flex md:w-auto md:flex-row md:items-center md:gap-5 md:border-0 md:pt-0`}
-        >
-          {navigation.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              onClick={() => setMenuOpen(false)}
-              className="rounded px-2 py-2 text-sm font-medium text-muted-foreground transition hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-            >
-              {item.label}
-            </a>
-          ))}
-        </nav>
       </div>
     </header>
   );
