@@ -41,11 +41,12 @@ export const content = {
   },
   about: {
     label: "About me",
-    title: "About",
     paragraphs: [
-      "I'm a software engineer who fell for the place where code meets people: the moment a screen just makes sense to whoever is using it.",
-      "I started out studying electronics and communication, learning how signals travel and how systems talk to each other. That curiosity never left. It just found a new home in the browser. Along the way I've worked across the stack and spent time in the world of data, where I learned how much good software depends on trust, clarity, and care for the information it handles.",
-      "I'm happiest building with React and TypeScript, shaping interfaces that feel calm, fast, and obvious, and wiring them to backends that quietly do their job. I like understanding a problem all the way down before I touch the keyboard, and I like it even more when the result is something people don't have to think about.",
+      "I am a software engineer who fell for the place where code meets people: the moment a screen just makes sense to whoever is using it.",
+      "I was born and raised in Calcutta, a city that runs on stories, music, and conversation. Growing up Bengali meant growing up around music, dance, and storytelling, and around the people who live for them. Bengal’s long lineage of poets, painters, and thinkers is in my bones. It’s where my creativity comes from, and it’s why I still believe the things we build should carry a little soul.",
+      "I started out studying electronics and communication, learning how signals travel and how systems talk to each other. That curiosity never left. It just found a new home in the browser. Along the way I’ve worked across the stack and spent time in the world of data, where I learned how much good software depends on trust, clarity, and care for the information it handles.",
+      "Then life rolled the dice. Out of the blue, I moved from one country to another, to the San Francisco Bay Area, without knowing a single person or what lay ahead. It was equal parts terrifying and thrilling, and it taught me that starting from zero is just another way of building something new.",
+      "I am the happiest building websites, applications & shaping interfaces that feel calm, fast, and obvious, and wiring them to backends that quietly do their job. I like understanding a problem all the way down before I touch the keyboard, and I like it even more when the result is something people don’t have to think about."
     ],
     portraitAlt: "Portrait of Anisha Karmakar",
   },

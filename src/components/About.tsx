@@ -3,26 +3,34 @@ import Section from "@/components/Section";
 
 interface AboutProps {
   label: string;
-  title: string;
+  title?: string;
   paragraphs: readonly string[];
   portraitAlt: string;
 }
 
 export default function About({ label, title, paragraphs, portraitAlt }: AboutProps) {
+  const portraitParagraph = paragraphs.at(-1);
+  const textParagraphs = paragraphs.slice(0, -1);
+
   return (
     <Section id="about" label={label} title={title} labelClassName="text-sm sm:text-base">
       <div className="grid gap-10 md:grid-cols-[0.75fr_1.25fr] md:items-start lg:gap-16">
-        <figure className="mx-auto w-full max-w-sm rotate-1 border border-border bg-card p-3 shadow-sm md:mx-0">
-          <img
-            src={portrait}
-            alt={portraitAlt}
-            className="aspect-[4/5] w-full object-cover object-center"
-            loading="lazy"
-            decoding="async"
-          />
-        </figure>
+        <div className="flex flex-col">
+          <figure className="mx-auto w-full max-w-sm border border-border bg-card p-3 shadow-sm md:mx-0">
+            <img
+              src={portrait}
+              alt={portraitAlt}
+              className="aspect-[4/5] w-full object-cover object-center"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+          {portraitParagraph && (
+            <p className="mt-6 text-base leading-relaxed text-muted-foreground sm:text-lg">{portraitParagraph}</p>
+          )}
+        </div>
         <div className="space-y-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
-          {paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+          {textParagraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
         </div>
       </div>
     </Section>
