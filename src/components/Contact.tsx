@@ -1,5 +1,6 @@
 import Button from "@/components/Button";
 import Section from "@/components/Section";
+import Starburst from "@/components/Starburst";
 
 interface ContactProps {
   ctaLabel: string;
@@ -29,7 +30,14 @@ export default function Contact({ ctaLabel, openToWork, contact }: ContactProps)
 
   return (
     <>
-      <Section id="open-to-work" label={openToWork.label} title={openToWork.title}>
+      <Section id="open-to-work" label={openToWork.label} title={openToWork.title} className="relative isolate overflow-hidden">
+        <Starburst className="pointer-events-none absolute right-[6%] top-1/2 hidden w-[clamp(9rem,15vw,17rem)] -translate-y-1/2 text-secondary/70 lg:block" />
+        <Starburst className="pointer-events-none absolute right-[20%] top-[17%] hidden w-7 rotate-12 text-primary/45 lg:block" />
+        <Starburst className="pointer-events-none absolute bottom-[18%] right-[5%] hidden w-5 -rotate-6 text-primary/40 lg:block" />
+        <Starburst className="pointer-events-none absolute bottom-[24%] right-[23%] hidden w-6 rotate-6 text-primary/40 lg:block" />
+        <Starburst className="pointer-events-none absolute right-[11%] top-[20%] hidden w-4 -rotate-12 text-primary/35 lg:block" />
+        <Starburst className="pointer-events-none absolute bottom-[17%] right-[15%] hidden w-4 rotate-12 text-primary/35 lg:block" />
+        <Starburst className="pointer-events-none absolute right-[29%] top-1/2 hidden w-3 -rotate-6 text-primary/30 lg:block" />
         <div className="max-w-3xl">
           <p className="text-lg leading-relaxed text-muted-foreground">{openToWork.body}</p>
           <Button href="#contact" className="mt-7">{ctaLabel}</Button>

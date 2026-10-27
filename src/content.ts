@@ -10,6 +10,16 @@ export interface NavigationItem {
   href: string;
 }
 
+export interface SkillGroup {
+  title: string;
+  skills: readonly string[];
+}
+
+export interface SkillHighlight {
+  title: string;
+  body: string;
+}
+
 export const content = {
   name: "Anisha Karmakar",
   description:
@@ -27,11 +37,12 @@ export const content = {
   navigation: [
     { label: "About", href: "#about" },
     { label: "Values", href: "#values" },
+    { label: "Skills", href: "#skills" },
     { label: "Curiosities", href: "#curiosities" },
     { label: "Contact", href: "#contact" },
   ] satisfies NavigationItem[],
   hero: {
-    headline: "Hi, I'm Anisha.",
+    headline: "Hi, I am Anisha",
     subheadline: "I build thoughtful, human-feeling software for the web.",
     supportingLine:
       "Full stack engineer with a soft spot for the front end, based in the San Francisco Bay Area.",
@@ -71,9 +82,46 @@ export const content = {
       },
     ],
   },
+  skills: {
+    label: "Skills",
+    title: "What I bring to the table",
+    intro: "I can build the product and I can steer the project: from the first line of code to the final launch, I care about getting things made well and delivered calmly.",
+    tabs: [
+      {
+        id: "build",
+        label: "Build",
+        groups: [
+          { title: "Languages", skills: ["JavaScript (ES6+)", "TypeScript", "Python", "SQL", "HTML5", "CSS3"] },
+          { title: "Frontend", skills: ["React", "React Hooks", "Context API", "Redux", "Next.js", "Web Components", "Responsive Web Design", "Material UI", "Tailwind CSS", "Webpack", "Vite"] },
+          { title: "Backend and APIs", skills: ["Node.js", "Python", "REST APIs", "API Design", "API Integration", "API Testing", "Microservices", "Asynchronous Processing", "Distributed Systems"] },
+          { title: "Cloud and security", skills: ["AWS", "Azure", "GCP", "Cloudflare", "Serverless Workflows", "OAuth 2.0", "JWT", "Identity and Access Management", "Secure API Integration"] },
+          { title: "Testing and DevOps", skills: ["Git", "Jest", "React Testing Library", "Unit / Integration / Regression Testing", "Jenkins", "CI/CD", "Build and Release Processes", "Monitoring and Logging"] },
+          { title: "Engineering craft", skills: ["System Design", "Software Architecture", "Object-Oriented Design", "Performance Optimization", "Reliability Engineering", "Debugging", "Root-Cause Analysis", "Incident Management", "Agile/Scrum", "Code Reviews"] },
+          { title: "AI integration", skills: ["LLM APIs", "AI/ML API Integration", "Streaming Responses", "Asynchronous AI Workflows", "AI Agents"] },
+        ] satisfies readonly SkillGroup[],
+      },
+      {
+        id: "deliver",
+        label: "Deliver",
+        groups: [
+          { title: "Program delivery and governance", skills: ["Technical Program and Project Management", "End-to-End Program Planning", "Requirements through Launch", "Milestone and Dependency Management", "RAID Framework", "Risk Mitigation and Escalation", "Change Management", "Acceptance Criteria", "Scope and Schedule Management", "Executive Status Reporting"] },
+          { title: "Stakeholder leadership", skills: ["Cross-Functional Leadership", "Senior Stakeholder Communication", "Release Coordination", "Incident Management", "Operational Readiness", "Post-Delivery Follow-Up", "Time-to-Market Improvement"] },
+          { title: "Cloud, platform and infrastructure", skills: ["AWS", "Microsoft Azure", "GCP", "Cloudflare", "Serverless and Event-Driven Systems", "Microservices", "Distributed Systems", "REST APIs", "API Testing"] },
+          { title: "Identity and security", skills: ["IAM", "Active Directory", "Azure JIT", "Workload Identity Federation", "HashiCorp Vault", "Privileged Access Management (PAM)", "API Gateway", "AWS Lambda", "EventBridge", "SNS", "DynamoDB"] },
+          { title: "Analytics, AI and delivery methods", skills: ["AI Agents", "LLM API Integration", "KPI and Metrics Reporting", "KPI Dashboards", "Operational Analytics", "Bottleneck Analysis", "Agile (sprint planning, backlog and dependency management)", "Python", "VBA", "ReactJS"] },
+        ] satisfies readonly SkillGroup[],
+      },
+    ],
+    highlights: [
+      { title: "From idea to launch", body: "I can take a project from the first requirement all the way to release, writing the code and keeping the plan on track." },
+      { title: "Engineers and stakeholders, both fluent", body: "I translate between technical teams and decision-makers so everyone stays aligned." },
+      { title: "Secure and reliable by default", body: "Identity, access, and reliability are part of how I build, not an afterthought." },
+      { title: "AI that actually ships", body: "I connect language models and AI agents to real workflows, with streaming, async processing, and clear success criteria." },
+    ] satisfies readonly SkillHighlight[],
+  },
   curiosities: {
     label: "Curiosities",
-    title: "What I'm curious about",
+    title: "What I am curious about",
     items: [
       "How small details in an interface change the way something feels to use",
       "The long road from raw data to something a person can actually understand",
@@ -85,12 +133,12 @@ export const content = {
   howIWork: {
     label: "How I work",
     title: "Start with why. Make something real. Keep refining.",
-    body: "I start by asking why before how. I like to break a big problem into small, honest steps, build something real early, and keep refining. I'm comfortable owning a feature from idea to production, and just as comfortable stepping back to ask whether we should build it at all. I'm a steady communicator, a patient debugger, and a lifelong learner who still gets a small thrill when something finally works.",
+    body: "I start by asking why before how. I like to break a big problem into small, honest steps, build something real early, and keep refining. I am comfortable owning a feature from idea to production, and just as comfortable stepping back to ask whether we should build it at all. I am a steady communicator, a patient debugger, and a lifelong learner who still gets a small thrill when something finally works.",
   },
   beyondTheCode: {
     label: "A little more",
     title: "Beyond the code",
-    body: "[Placeholder: 2–3 lines about what I do outside of work. I will fill this in.]",
+    body: "Away from the keyboard, I’m a creative at heart. I draw, I cook, I read far too many books, and I’ll happily get lost in my own little world for an afternoon. I’m also passionate about photography: I love noticing how light, color, and framing can turn an ordinary moment into something worth keeping. I call myself a delusional optimist. I think you have to be a little bit insane to believe things will work out for you, and I’d rather be that kind of insane. It’s the same energy I bring to everything I make.",
   },
   whyIBuild: {
     title: "Why I build",
@@ -121,9 +169,9 @@ export const content = {
     ] satisfies Project[],
   },
   openToWork: {
-    label: "What I'm looking for",
+    label: "What I am looking for",
     title: "Open to the right next chapter.",
-    body: "I'm open to full-time software engineering roles in the Bay Area, especially on product teams that care about craft, welcome curiosity, and build things people actually use. If that sounds like your team, I'd love to talk.",
+    body: "I am open to full-time software engineering roles in the Bay Area, especially on product teams that care about craft, welcome curiosity, and build things people actually use. If that sounds like your team, I'd love to talk.",
   },
   contact: {
     label: "Contact",

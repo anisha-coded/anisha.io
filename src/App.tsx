@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import HowIWork from "@/components/HowIWork";
+import SkillsSection from "@/components/SkillsSection";
 import Values from "@/components/Values";
 import type { Theme } from "@/components/ThemeToggle";
 import { content } from "@/content";
@@ -55,6 +56,7 @@ export default function App() {
         <Hero {...content.hero} />
         <About {...content.about} />
         <Values {...content.values} />
+        <SkillsSection {...content.skills} />
         <Curiosities {...content.curiosities} />
         <HowIWork {...content.howIWork} />
         <BeyondTheCode {...content.beyondTheCode} whyIBuild={content.whyIBuild} />

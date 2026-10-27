@@ -24,7 +24,12 @@ export default function Footer({ name, email, content }: FooterProps) {
           </p>
           <p className="mt-2 text-sm text-muted-foreground">{content.note}</p>
         </div>
-        <p className="font-bold text-foreground">{name}</p>
+        <div className="flex items-center gap-5 sm:gap-7">
+          <nav aria-label="Footer navigation">
+            <a href="#skills" className="rounded px-2 py-2 text-sm font-medium text-muted-foreground transition hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">Skills</a>
+          </nav>
+          <p className="font-bold text-foreground">{name}</p>
+        </div>
       </div>
     </footer>
   );
