@@ -7,7 +7,6 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import HowIWork from "@/components/HowIWork";
-import Projects from "@/components/Projects";
 import Values from "@/components/Values";
 import type { Theme } from "@/components/ThemeToggle";
 import { content } from "@/content";
@@ -59,7 +58,6 @@ export default function App() {
         <Curiosities {...content.curiosities} />
         <HowIWork {...content.howIWork} />
         <BeyondTheCode {...content.beyondTheCode} whyIBuild={content.whyIBuild} />
-        <Projects {...content.projects} />
         <Contact
           ctaLabel={content.hero.getInTouch}
           openToWork={content.openToWork}

@@ -28,7 +28,6 @@ export const content = {
     { label: "About", href: "#about" },
     { label: "Values", href: "#values" },
     { label: "Curiosities", href: "#curiosities" },
-    { label: "Projects", href: "#projects" },
     { label: "Contact", href: "#contact" },
   ] satisfies NavigationItem[],
   hero: {
