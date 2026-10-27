@@ -5,9 +5,9 @@ import { story, images } from "@/data/story";
 export default function PortfolioHeader() {
   return (
     <header className="border border-border bg-card p-5 md:p-8">
-      <div className="flex items-baseline justify-between font-mono text-[10px] uppercase tracking-[0.26em] text-hazel">
+      <div className="flex flex-wrap items-baseline justify-between gap-2 font-mono text-base font-bold uppercase tracking-[0.26em] text-hazel">
         <span>{story.eyebrow}</span>
-        <span>★ ☆ {story.name} ☆ ★</span>
+        <span>{story.name}</span>
       </div>
 
       <div className="mt-3 flex flex-wrap items-end gap-x-4">
