@@ -16,7 +16,7 @@ export default function Footer({ name, email, content }: FooterProps) {
           <p className="text-base leading-relaxed text-foreground">
             {content.prompt}{" "}
             <a
-              className="font-semibold underline decoration-terra underline-offset-4 transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              className="inline-flex min-h-11 items-center rounded-full border border-terra bg-terra px-4 py-2 font-semibold text-card shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               href={`mailto:${email}`}
             >
               {content.sayHello}
