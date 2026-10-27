@@ -136,5 +136,9 @@ export const content = {
     linkedinLabel: "LinkedIn",
     githubLabel: "GitHub",
   },
-  footer: "Thank you for visiting. I hope to see you again soon.",
+  footer: {
+    prompt: "Have an idea you can’t stop thinking about? Let’s build it together.",
+    sayHello: "Say hello →",
+    note: "Made with love, between Calcutta and the Bay.",
+  },
 } as const;

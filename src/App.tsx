@@ -66,7 +66,7 @@ export default function App() {
           contact={content.contact}
         />
       </main>
-      <Footer name={content.name} message={content.footer} />
+      <Footer name={content.name} email={content.contact.email} content={content.footer} />
     </div>
   );
 }
