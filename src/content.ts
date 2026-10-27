@@ -125,7 +125,7 @@ export const content = {
     label: "Contact",
     title: "Get in touch",
     email: "[your-email]",
-    linkedin: "[your-linkedin-url]",
+    linkedin: "https://www.linkedin.com/in/anikar02/",
     github: "https://github.com/anisha-coded",
     emailLabel: "Email",
     linkedinLabel: "LinkedIn",
