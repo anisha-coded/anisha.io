@@ -13,7 +13,7 @@ const variants: Record<ButtonVariant, string> = {
     "border-primary bg-primary text-primary-foreground hover:-translate-y-0.5 hover:shadow-md",
   secondary:
     "border-border bg-card text-foreground hover:-translate-y-0.5 hover:border-primary",
-  quiet: "border-transparent text-foreground underline decoration-terra underline-offset-4 hover:text-primary",
+  quiet: "ink-link border-transparent text-foreground hover:text-primary",
 };
 
 export default function Button({

@@ -26,8 +26,9 @@ module.exports = {
           foreground: "hsl(var(--muted-foreground))",
         },
         border: "hsl(var(--border))",
-        ring: "hsl(var(--ring))",
-        terra: "hsl(var(--terra))",
+        ring: "var(--ring)",
+        "accent-red": "var(--accent-red)",
+        "accent-red-deep": "var(--accent-red-deep)",
         hazel: "hsl(var(--hazel))",
       },
       fontFamily: {

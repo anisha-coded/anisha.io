@@ -1,6 +1,8 @@
 interface FooterProps {
   name: string;
   email: string;
+  projectsLabel: string;
+  projectsHref: string;
   content: {
     prompt: string;
     sayHello: string;
@@ -8,7 +10,7 @@ interface FooterProps {
   };
 }
 
-export default function Footer({ name, email, content }: FooterProps) {
+export default function Footer({ name, email, projectsLabel, projectsHref, content }: FooterProps) {
   return (
     <footer className="border-t border-border py-7">
       <div className="mx-auto flex max-w-6xl flex-col gap-4 px-5 sm:flex-row sm:items-end sm:justify-between sm:px-8">
@@ -16,17 +18,17 @@ export default function Footer({ name, email, content }: FooterProps) {
           <p className="text-base leading-relaxed text-foreground">
             {content.prompt}{" "}
             <a
-              className="inline-flex min-h-11 items-center rounded-full border border-terra bg-terra px-4 py-2 font-bold text-card shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              className="inline-flex min-h-11 items-center rounded-full border border-accent-red-deep bg-accent-red-deep px-4 py-2 font-bold text-card shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
               href={`mailto:${email}`}
             >
               {content.sayHello}
             </a>
           </p>
-          <p className="mt-2 text-sm text-muted-foreground">{content.note}</p>
+          <p className="mt-2 text-sm text-muted-foreground">{content.note} <span aria-hidden="true" className="text-accent-red-deep">❤</span></p>
         </div>
         <div className="flex items-center gap-5 sm:gap-7">
           <nav aria-label="Footer navigation">
-            <a href="#skills" className="rounded px-2 py-2 text-sm font-medium text-muted-foreground transition hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">Skills</a>
+            <a href={projectsHref} className="ink-link rounded px-2 py-2 text-sm font-medium text-muted-foreground transition hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">{projectsLabel}</a>
           </nav>
           <p className="font-bold text-foreground">{name}</p>
         </div>

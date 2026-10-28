@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { NavigationItem } from "@/content";
 import type { Theme } from "@/components/ThemeToggle";
 
@@ -29,6 +29,31 @@ export default function Header({
   themeToggleLabels,
 }: HeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeHref, setActiveHref] = useState("");
+
+  useEffect(() => {
+    const sectionElements = navigation
+      .map((item) => document.getElementById(item.href.slice(1)))
+      .filter((element): element is HTMLElement => element instanceof HTMLElement);
+    if (!sectionElements.length || !("IntersectionObserver" in window)) return;
+
+    const visibleSections = new Set<HTMLElement>();
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const section = entry.target as HTMLElement;
+        if (entry.isIntersecting) visibleSections.add(section);
+        else visibleSections.delete(section);
+      });
+      const closestSection = [...visibleSections].sort((a, b) =>
+        Math.abs(a.getBoundingClientRect().top - window.innerHeight * 0.25)
+        - Math.abs(b.getBoundingClientRect().top - window.innerHeight * 0.25),
+      )[0];
+      if (closestSection) setActiveHref(`#${closestSection.id}`);
+    }, { rootMargin: "-18% 0px -68% 0px", threshold: 0 });
+
+    sectionElements.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, [navigation]);
 
   return (
     <header className="sticky top-0 z-30 border-b border-border/80 bg-background/95 backdrop-blur">
@@ -54,8 +79,9 @@ export default function Header({
               <a
                 key={item.href}
                 href={item.href}
+                aria-current={activeHref === item.href ? "location" : undefined}
                 onClick={() => setMenuOpen(false)}
-                className="rounded px-2 py-2 text-sm font-medium text-muted-foreground transition hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                className="nav-ink-link rounded px-2 py-2 text-sm font-medium text-muted-foreground transition hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               >
                 {item.label}
               </a>

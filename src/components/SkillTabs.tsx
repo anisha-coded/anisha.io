@@ -40,7 +40,7 @@ export default function SkillTabs({ tabs, activeTab, onChange }: SkillTabsProps)
           tabIndex={activeTab === tab.id ? 0 : -1}
           onClick={() => onChange(tab.id)}
           onKeyDown={(event) => handleKeyDown(event, index)}
-          className={`min-h-11 flex-1 rounded-full px-5 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${activeTab === tab.id ? "bg-primary text-primary-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"}`}
+          className={`relative min-h-11 flex-1 rounded-full px-5 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${activeTab === tab.id ? "bg-primary text-primary-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"}`}
         >
           {tab.label}
         </button>

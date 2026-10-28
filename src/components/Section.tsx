@@ -28,6 +28,7 @@ export default function Section({
     >
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <p className={`font-mono font-medium uppercase tracking-[0.18em] text-foreground ${labelClassName}`}>
+          <span aria-hidden="true" className="section-label-mark">✱</span>
           {label}
         </p>
         {title && (

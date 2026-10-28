@@ -17,15 +17,16 @@
     --secondary-foreground: 88 29% 26%;
     --muted: 40 30% 88%;
     --muted-foreground: 88 18% 34%;
-    --accent: 355 51% 53%;
+    --accent-red: #c44a54;
+    --accent-red-deep: #b23a48;
+    --accent: var(--accent-red);
     --accent-foreground: 40 43% 96%;
-    --destructive: 355 51% 53%;
+    --destructive: var(--accent-red);
     --destructive-foreground: 40 43% 96%;
     --border: 40 24% 84%;
     --input: 40 24% 84%;
-    --ring: 355 51% 53%;
+    --ring: var(--accent-red);
     --radius: 0.125rem;
-    --terra: 355 51% 53%;
     --coral: 7 82% 72%;
     --saffron: 43 85% 75%;
     --indian: 29 87% 64%;
@@ -43,7 +44,7 @@
     --sidebar-accent: 40 30% 88%;
     --sidebar-accent-foreground: 88 29% 26%;
     --sidebar-border: 40 24% 84%;
-    --sidebar-ring: 355 51% 53%;
+    --sidebar-ring: var(--accent-red);
   }
 
   :root.dark {
@@ -60,14 +61,15 @@
     --secondary-foreground: 49 47% 93%;
     --muted: 88 14% 22%;
     --muted-foreground: 49 20% 76%;
-    --accent: 355 51% 60%;
+    --accent-red: #ed7b86;
+    --accent-red-deep: #f08f99;
+    --accent: var(--accent-red);
     --accent-foreground: 49 47% 96%;
-    --destructive: 355 51% 60%;
+    --destructive: var(--accent-red);
     --destructive-foreground: 49 47% 96%;
     --border: 88 14% 30%;
     --input: 88 14% 30%;
-    --ring: 355 51% 60%;
-    --terra: 355 51% 60%;
+    --ring: var(--accent-red);
     --coral: 7 82% 72%;
     --saffron: 43 85% 75%;
     --indian: 29 87% 64%;
@@ -82,7 +84,7 @@
     --sidebar-accent: 88 14% 22%;
     --sidebar-accent-foreground: 49 47% 93%;
     --sidebar-border: 88 14% 30%;
-    --sidebar-ring: 355 51% 60%;
+    --sidebar-ring: var(--accent-red);
   }
 
   * {
@@ -118,12 +120,12 @@
   }
 
   ::selection {
-    background: hsl(var(--terra));
-    color: hsl(var(--accent-foreground));
+    background: var(--accent-red);
+    color: hsl(var(--card));
   }
 
   :focus-visible {
-    outline: 3px solid hsl(var(--ring));
+    outline: 3px solid var(--ring);
     outline-offset: 3px;
   }
 }
@@ -158,6 +160,69 @@
   .skip-link:focus {
     transform: translateY(0);
   }
+
+  .section-label-mark {
+    margin-right: 0.65em;
+    color: var(--accent-red-deep);
+    font-size: 0.9em;
+  }
+
+  .nav-ink-link {
+    position: relative;
+  }
+
+  .nav-ink-link::after {
+    position: absolute;
+    pointer-events: none;
+    right: 0.55rem;
+    bottom: 0.15rem;
+    left: 0.55rem;
+    height: 0.25rem;
+    border-radius: 999px;
+    background: var(--accent-red-deep);
+    content: "";
+    opacity: 0;
+    transform: scaleX(0.45);
+    transition: opacity 160ms ease, transform 160ms ease;
+  }
+
+  .nav-ink-link:hover::after {
+    opacity: 0.45;
+    transform: scaleX(1);
+  }
+
+  .nav-ink-link[aria-current="location"]::after {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+
+  .ink-link:hover {
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: var(--accent-red-deep);
+    text-underline-offset: 4px;
+  }
+
+  .washi-tape {
+    border: 1px solid color-mix(in srgb, var(--accent-red) 55%, transparent);
+    background: color-mix(in srgb, var(--accent-red) 32%, transparent);
+  }
+
+  .shared-skill-tag {
+    border-color: color-mix(in srgb, var(--accent-red) 50%, transparent);
+  }
+
+  .project-reveal {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 500ms ease, transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .project-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
 }
 
 @layer utilities {
@@ -202,5 +267,20 @@
   }
   .theme-name-hint {
     animation: none;
+  }
+  .postmark-cancel-lines {
+    display: none;
+  }
+  .project-reveal,
+  .project-reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .postmark-cancel-lines {
+    display: none;
   }
 }

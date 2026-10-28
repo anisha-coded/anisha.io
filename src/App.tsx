@@ -7,7 +7,9 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import HowIWork from "@/components/HowIWork";
+import ProjectsSection from "@/components/Projects";
 import SkillsSection from "@/components/SkillsSection";
+import ScrollProgress from "@/components/ScrollProgress";
 import Values from "@/components/Values";
 import type { Theme } from "@/components/ThemeToggle";
 import { content } from "@/content";
@@ -41,6 +43,7 @@ export default function App() {
 
   return (
     <div id="top" className="min-h-screen bg-background text-foreground">
+      <ScrollProgress />
       <a className="skip-link" href="#main-content">{content.skipLink}</a>
       <Header
         name={content.name}
@@ -57,6 +60,7 @@ export default function App() {
         <About {...content.about} />
         <Values {...content.values} />
         <SkillsSection {...content.skills} />
+        <ProjectsSection {...content.projects} />
         <Curiosities {...content.curiosities} />
         <HowIWork {...content.howIWork} />
         <BeyondTheCode {...content.beyondTheCode} whyIBuild={content.whyIBuild} />
@@ -66,7 +70,13 @@ export default function App() {
           contact={content.contact}
         />
       </main>
-      <Footer name={content.name} email={content.contact.email} content={content.footer} />
+      <Footer
+        name={content.name}
+        email={content.contact.email}
+        projectsLabel={content.projects.label}
+        projectsHref="#projects"
+        content={content.footer}
+      />
     </div>
   );
 }

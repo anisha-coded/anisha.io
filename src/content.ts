@@ -1,8 +1,13 @@
 export interface Project {
+  id: string;
+  label: string;
   title: string;
-  description: string;
-  technologies: readonly string[];
-  link: string;
+  tagline: string;
+  intro: string;
+  bullets: readonly string[];
+  outcomeLabel: string;
+  outcome: string;
+  tracks: readonly string[];
 }
 
 export interface NavigationItem {
@@ -38,6 +43,7 @@ export const content = {
     { label: "About", href: "#about" },
     { label: "Values", href: "#values" },
     { label: "Skills", href: "#skills" },
+    { label: "Projects", href: "#projects" },
     { label: "Curiosities", href: "#curiosities" },
     { label: "Contact", href: "#contact" },
   ] satisfies NavigationItem[],
@@ -46,6 +52,7 @@ export const content = {
     subheadline: "I build thoughtful, human-feeling software for the web.",
     supportingLine:
       "Full stack engineer with a soft spot for the front end, based in the San Francisco Bay Area.",
+    experienceLine: "7 years of building and shipping software, from the automotive industry to enterprise security.",
     viewWork: "View my work",
     getInTouch: "Get in touch",
   },
@@ -55,7 +62,7 @@ export const content = {
       "I am a software engineer who fell for the place where code meets people: the moment a screen just makes sense to whoever is using it.",
       "I was born and raised in Calcutta, a city that runs on stories, music, and conversation. Growing up Bengali meant growing up around music, dance, and storytelling, and around the people who live for them. Bengal’s long lineage of poets, painters, and thinkers is in my bones. It’s where my creativity comes from, and it’s why I still believe the things we build should carry a little soul.",
       "I started out studying electronics and communication, learning how signals travel and how systems talk to each other. That curiosity never left. It just found a new home in the browser. Along the way I’ve worked across the stack and spent time in the world of data, where I learned how much good software depends on trust, clarity, and care for the information it handles.",
-      "Then life rolled the dice. Out of the blue, I moved from one country to another, to the San Francisco Bay Area, without knowing a single person or what lay ahead. It was equal parts terrifying and thrilling, and it taught me that starting from zero is just another way of building something new.",
+      "Then life rolled the dice and one fine morning, I landed in San Francisco Bay Area, without a single clue of what's ahead. It was equal parts terrifying and thrilling, and it taught me that starting from zero is just another way of building something new.",
       "I am the happiest building websites, applications & shaping interfaces that feel calm, fast, and obvious, and wiring them to backends that quietly do their job. I like understanding a problem all the way down before I touch the keyboard, and I like it even more when the result is something people don’t have to think about."
     ],
     portraitAlt: "Portrait of Anisha Karmakar",
@@ -145,26 +152,45 @@ export const content = {
     body: "I code because it’s the closest thing I know to magic: you start with an idea only you can see, and with enough patience and curiosity it becomes something real that other people can use. The freedom to create something new and put my own vision into the world is what keeps me in this field.",
   },
   projects: {
-    label: "Selected work",
-    title: "Projects",
+    label: "Projects",
+    title: "Things I've built",
+    detailsNote: "Details are kept general to respect confidentiality.",
     items: [
       {
-        title: "[Project title]",
-        description: "[Project description]",
-        technologies: ["[Tech tag]", "[Tech tag]"],
-        link: "[project-link]",
+        id: "project-security",
+        label: "PROJECT ONE · ABOUT 4 YEARS",
+        title: "Securing access, end to end",
+        tagline: "An internal security platform I took from a blank page to production, and then looked after.",
+        intro: "I owned this one from the first conversation to the last incident.",
+        bullets: [
+          "Analyzed business needs and turned them into clear requirements, acceptance criteria and technical specifications.",
+          "Designed the architecture, the API contracts, and the identity and access model.",
+          "Built the front end, the secure APIs and the event-driven cloud services behind it.",
+          "Tested it thoroughly with automated unit, integration and regression suites in the CI/CD pipeline.",
+          "Launched it, coordinating readiness and releases across engineering, security and operations.",
+          "Handled incident management and root-cause analysis after launch.",
+          "Built a single incident dashboard for leadership, automated manual workflows, and created AI agents to take routine triage off people's plates.",
+        ],
+        outcomeLabel: "Outcome",
+        outcome: "Access that once took days now takes minutes, security incidents went down, and recovery got faster when things broke.",
+        tracks: ["Build", "Deliver"],
       },
       {
-        title: "[Project title]",
-        description: "[Project description]",
-        technologies: ["[Tech tag]", "[Tech tag]"],
-        link: "[project-link]",
-      },
-      {
-        title: "[Project title]",
-        description: "[Project description]",
-        technologies: ["[Tech tag]", "[Tech tag]"],
-        link: "[project-link]",
+        id: "project-automotive",
+        label: "PROJECT TWO · ABOUT 3 YEARS",
+        title: "Quarterly clarity for the automotive world",
+        tagline: "Responsive web applications and dashboards that keep an industry's quarterly data easy to read.",
+        intro: "Enterprise automotive teams needed their quarterly data organized, current and readable on any screen.",
+        bullets: [
+          "Built responsive web applications and dashboards for enterprise automotive clients.",
+          "Kept quarterly data organized and up to date so reporting stayed consistent.",
+          "Created reusable UI components and asynchronous API workflows so large amounts of data loaded smoothly.",
+          "Automated recurring reports and repetitive workflow steps with scripts.",
+          "Kept quality high with regression testing, cross-browser debugging and code reviews.",
+        ],
+        outcomeLabel: "Outcome",
+        outcome: "Reports that were slow and manual became quick and repeatable, and teams spent their time on decisions instead of copy and paste.",
+        tracks: ["Build"],
       },
     ] satisfies Project[],
   },

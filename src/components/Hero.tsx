@@ -5,6 +5,7 @@ interface HeroProps {
   headline: string;
   subheadline: string;
   supportingLine: string;
+  experienceLine: string;
   viewWork: string;
   getInTouch: string;
 }
@@ -13,6 +14,7 @@ export default function Hero({
   headline,
   subheadline,
   supportingLine,
+  experienceLine,
   viewWork,
   getInTouch,
 }: HeroProps) {
@@ -24,6 +26,7 @@ export default function Hero({
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-20 sm:px-8 sm:py-28 lg:grid-cols-[1.15fr_0.85fr] lg:items-end lg:gap-16 lg:py-36">
         <div className="rise">
           <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-foreground">
+            <span aria-hidden="true" className="section-label-mark">✱</span>
             {supportingLine}
           </p>
           <h1 id="hero-title" className="type-hero mt-6 max-w-4xl text-foreground">
@@ -33,6 +36,9 @@ export default function Hero({
               {headline.slice(emphasizedWordStart + emphasizedWord.length)}
             </>}
           </h1>
+          <p className="mt-5 max-w-3xl font-mono text-xs leading-relaxed text-muted-foreground sm:text-sm">
+            <span aria-hidden="true" className="section-label-mark">✱</span>{experienceLine}
+          </p>
         </div>
         <div className="rise-late lg:pb-2">
           <p className="max-w-xl text-xl leading-relaxed text-muted-foreground sm:text-2xl">

@@ -14,7 +14,7 @@ export default function HowIWork({ label, title, body }: HowIWorkProps) {
       <Starburst className="pointer-events-none absolute bottom-[22%] left-[21%] hidden w-5 -rotate-6 text-secondary/85 dark:text-foreground/55 lg:block" />
       <Starburst className="pointer-events-none absolute bottom-[19%] left-[3%] hidden w-6 rotate-6 text-secondary/80 dark:text-foreground/50 lg:block" />
       <div className="relative z-10 mx-auto grid max-w-6xl gap-8 px-5 sm:px-8 lg:grid-cols-[0.7fr_1.3fr] lg:gap-16">
-        <p className="font-mono text-xs font-medium uppercase tracking-[0.18em] text-primary-foreground dark:text-foreground">{label}</p>
+        <p className="font-mono text-xs font-medium uppercase tracking-[0.18em] text-primary-foreground dark:text-foreground"><span aria-hidden="true" className="section-label-mark">✱</span>{label}</p>
         <div>
           <h2 id="how-i-work-title" className="type-section-title">{title}</h2>
           <p className="mt-6 max-w-3xl text-lg leading-relaxed text-primary-foreground/85 dark:text-foreground/85">{body}</p>
