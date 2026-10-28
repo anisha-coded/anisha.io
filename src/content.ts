@@ -133,14 +133,14 @@ export const content = {
       "How small details in an interface change the way something feels to use",
       "The long road from raw data to something a person can actually understand",
       "Performance: why some pages feel instant and others feel heavy, and what it takes to close that gap",
-      "How AI is reshaping the way we build, and how to use it as a thoughtful collaborator rather than a shortcut",
+      "How AI can be a thinking partner, helping me sort ideas, plan, and turn them into things that ship, while I keep the judgment",
       "The hardware-to-software stack I started in, and how all those layers still shape what we ship today",
     ],
   },
   howIWork: {
     label: "How I work",
     title: "Start with why. Make something real. Keep refining.",
-    body: "I start by asking why before how. I like to break a big problem into small, honest steps, build something real early, and keep refining. I am comfortable owning a feature from idea to production, and just as comfortable stepping back to ask whether we should build it at all. I am a steady communicator, a patient debugger, and a lifelong learner who still gets a small thrill when something finally works.",
+    body: "I start by asking why before how. I like to break a big problem into small, honest steps, build something real early, and keep refining. I am comfortable owning a feature from idea to production, and just as comfortable stepping back to ask whether we should build it at all. I am a steady communicator, a patient debugger, and a lifelong learner who still gets a small thrill when something finally works. I use AI to organize my thinking and plan the work, and I decide what's worth building.",
   },
   beyondTheCode: {
     label: "A little more",
@@ -150,6 +150,15 @@ export const content = {
   whyIBuild: {
     title: "Why I build",
     body: "I code because it’s the closest thing I know to magic: you start with an idea only you can see, and with enough patience and curiosity it becomes something real that other people can use. The freedom to create something new and put my own vision into the world is what keeps me in this field.",
+  },
+  thinkingWithAI: {
+    id: "thinking-with-ai",
+    title: "Thinking out loud, with AI",
+    paragraphs: [
+      "I like to think in every direction at once, and AI is where I untangle it. I pour out the messy, half-formed ideas, and it helps me sort them, find the shape underneath, and turn them into a plan I can act on. I stay the one making the decisions. It simply makes room for my thinking. By the time I sit down to build, the fog has lifted and I know what comes next.",
+      "At work, I've taken the same idea further: building AI agents that take routine work off people's plates.",
+    ],
+    fromLabel: "From: Anisha",
   },
   projects: {
     label: "Projects",

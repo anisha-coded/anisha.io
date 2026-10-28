@@ -63,7 +63,7 @@ export default function App() {
         <ProjectsSection {...content.projects} />
         <Curiosities {...content.curiosities} />
         <HowIWork {...content.howIWork} />
-        <BeyondTheCode {...content.beyondTheCode} whyIBuild={content.whyIBuild} />
+        <BeyondTheCode {...content.beyondTheCode} whyIBuild={content.whyIBuild} thinkingWithAI={content.thinkingWithAI} />
         <Contact
           ctaLabel={content.hero.getInTouch}
           openToWork={content.openToWork}

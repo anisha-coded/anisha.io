@@ -152,6 +152,30 @@
     line-height: 1.15;
   }
 
+  .thinking-doodle path {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+  }
+
+  .thinking-scribble {
+    transition: stroke-dashoffset 900ms ease;
+  }
+
+  .thinking-arrow-line,
+  .thinking-arrow-head {
+    stroke: hsl(var(--hazel));
+    transition: stroke-dashoffset 550ms ease;
+    transition-delay: 900ms;
+  }
+
+  .thinking-scribble {
+    stroke: var(--accent-red-deep);
+  }
+
+  .thinking-doodle.is-visible path {
+    stroke-dashoffset: 0;
+  }
+
   .skip-link {
     @apply fixed left-4 top-4 z-50 rounded-full bg-primary px-5 py-3 font-bold text-primary-foreground shadow-lg;
     transform: translateY(-180%);
@@ -275,6 +299,10 @@
   .project-reveal.is-visible {
     opacity: 1;
     transform: none;
+    transition: none;
+  }
+  .thinking-doodle path {
+    stroke-dashoffset: 0;
     transition: none;
   }
 }
