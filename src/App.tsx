@@ -72,9 +72,8 @@ export default function App() {
       </main>
       <Footer
         name={content.name}
+        location="San Francisco Bay Area"
         email={content.contact.email}
-        projectsLabel={content.projects.label}
-        projectsHref="#projects"
         content={content.footer}
       />
     </div>

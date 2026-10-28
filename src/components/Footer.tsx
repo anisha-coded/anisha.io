@@ -1,8 +1,7 @@
 interface FooterProps {
   name: string;
+  location: string;
   email: string;
-  projectsLabel: string;
-  projectsHref: string;
   content: {
     prompt: string;
     sayHello: string;
@@ -10,7 +9,7 @@ interface FooterProps {
   };
 }
 
-export default function Footer({ name, email, projectsLabel, projectsHref, content }: FooterProps) {
+export default function Footer({ name, location, email, content }: FooterProps) {
   return (
     <footer className="border-t border-border py-7">
       <div className="mx-auto flex max-w-6xl flex-col gap-4 px-5 sm:flex-row sm:items-end sm:justify-between sm:px-8">
@@ -26,11 +25,9 @@ export default function Footer({ name, email, projectsLabel, projectsHref, conte
           </p>
           <p className="mt-2 text-sm text-muted-foreground">{content.note} <span aria-hidden="true" className="text-accent-red-deep">❤</span></p>
         </div>
-        <div className="flex items-center gap-5 sm:gap-7">
-          <nav aria-label="Footer navigation">
-            <a href={projectsHref} className="ink-link rounded px-2 py-2 text-sm font-medium text-muted-foreground transition hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">{projectsLabel}</a>
-          </nav>
+        <div>
           <p className="font-bold text-foreground">{name}</p>
+          <p className="text-sm text-muted-foreground">{location}</p>
         </div>
       </div>
     </footer>
