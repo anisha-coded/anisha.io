@@ -154,7 +154,6 @@ export const content = {
   projects: {
     label: "Projects",
     title: "Things I've built",
-    detailsNote: "Details are kept general to respect confidentiality.",
     items: [
       {
         id: "project-security",
